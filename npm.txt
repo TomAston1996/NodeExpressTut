@@ -6,3 +6,16 @@
 // global dependency - use it in any project
 // npm install -g <packageName>
 // all dependencies stored in node_modules
+
+//npm install - this will download all dependiencies in the package.json
+
+//npm i <packageName> --save-dev - this will install as a developement dependency, shows just used for development and not in production
+
+const _ = require('lodash');
+
+// flatten a nested array
+const items = [1, [2, [3, [4]]]]
+const flatItems = _.flattenDeep(items)
+console.log(flatItems)
+
+console.log('Hello world')

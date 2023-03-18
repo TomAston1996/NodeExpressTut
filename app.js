@@ -1,16 +1,12 @@
-//npm - global command, comes with node
+const EventEmitter = require('events');
 
-// local dependency - use it only in this particular project
-// npm i <packageName>
+const customEmitter = new EventEmitter()
 
-// global dependency - use it in any project
-// npm install -g <packageName>
+customEmitter.on('response', () => {
+    console.log(`data recieved`)
+}) //listen for event
 
-//package.json - stores important info about project/package
-// npm init -y
 
-const _ = require('lodash');
 
-const items = [1, [2, [3, [4]]]]
-const flatItems = _.flattenDeep(items)
-console.log(flatItems)
+
+customEmitter.emit('response')
